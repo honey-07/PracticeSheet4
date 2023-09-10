@@ -1,27 +1,23 @@
-/* Write a C++ Program to display largest among two numbers using function template.
- Pass Integer, Float as parameter to the function template.*/
+// Write a C++ program to make inline function to find odd/even.
 
 #include<iostream>
 using namespace std;
+inline void check(int num)
 
-template<class t1, class t2>
-void display(t1 n1,t2 n2)
-{
-	if(n1 > n2)
-		cout << "LARGEST NUMBER IS : " << n1;
-	else
-		cout << "LARGEST NUMBER IS : "<< n2;
-}
+	{
+		if(num % 2 == 0)
+			cout << "is even";
+		else
+			cout << "is odd";
+	}																																															
 
 int main()
 {
-	int n1;
-	float n2;
-	cout << "Enter integer number : ";
-	cin >> n1;
-	cout << "Enter float number : ";
-	cin >> n2;
+	int n;
+	cout << "enter any integer : ";
+	cin >> n;
 
-	display(n1,n2);
-return 0;	
+	check(n);
+return 0;
+	
 }
