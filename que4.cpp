@@ -1,23 +1,36 @@
-//Write a C++ Program to add, subtract, multiply and divide two numbers using class template.
+/*Create a function power() to raise a number m to power n. the function takes a double value for m and int value for n, and returns the result correctly. 
+Use the default value of 2 for n to mke the function calculate squares when this argument is omitted */
 
 #include<iostream>
 using namespace std;
 
-template<class t,class t2>
-class operation
+class calculate
 {
-
 public:
-	void operations(t n1,t2 n2)
+	 double power(double m, int n=2)
 	{
-		cout << "ADDITION IS : " << n1 + n2 << endl;
-		cout << "SUBSTRACTION IS : " << n1 - n2 << endl;
-		cout << "MULTIPLICATION IS : " << n1 * n2 << endl;
-		cout << "DIVISION IS : " << n1 / n2 << endl;
+		double result=1.0;
+		for (int i = 1; i <= 2; i++)
+		{
+			result = result * m;
+		}
+		return result;
+	}
+	int square(int n)
+	{
+		int sq=n*n;
+		return sq;
 	}
 };
 int main()
-{	operation<int,float>ob;
-	ob.operations(7,11.9);
-return 0;
+{
+	calculate a;
+	int n=3,sq;
+	double result;
+	result=a.power(5.5);
+	sq=a.square(n);
+		cout<<"power is : "<< result;
+		cout<<"square is : "<<sq;
+ 
+	return 0;
 }
