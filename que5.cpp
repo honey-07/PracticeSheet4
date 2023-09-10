@@ -1,34 +1,28 @@
-// Write a program to create a function template for finding minimum value contained in an array.
+// Write a C++ Program to addition and subtraction of two values using Constructor.
 
 #include<iostream>
 using namespace std;
-template<class t>
+ class addsub
+ {
+ public:
+ 	int x,y;
 
-t min(t a[],t s)
-{
-  t min=a[0];
-		for (int i = 1; i < s; i++)
-		{		
-			if(min > a[i]){
-			min=a[i];
-			}	
-		}
-		cout << "MINIMUM NUMBER FROM ARRAY IS : " << min;
-}
+ 	addsub(int a, int b)
+ 	{
+ 		x=a;
+ 		y=b;
+ 		cout << "addition : " << x+y << endl;
+ 		cout << "substraction : " << x-y <<endl;
+ 	}
+ };
+ int main()
+ {
+    int a,b;
+    cout << "enter value of a : ";
+    cin >> a;
+    cout << "enter value of b : ";
+    cin >> b;
+    addsub(a,b);
+ 	return 0;
 
-int main()
-
-{
-	int a[30],s;
-	cout << "Enter size: ";
-	cin >> s;
-
-	cout << "Enter array elements : ";
-
-	for (int i = 0; i < s; i++)
-	{
-		cin >> a[i];
-	}
-	min(a,s);
-return 0;	
-}
+ }
