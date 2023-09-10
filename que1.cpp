@@ -1,46 +1,39 @@
-// Write a C++ Proram to return sorted Array in ascending order and print the sorted array in a function.
+// Create a class employee with name, salary, age as member, use get_data() and show() functions. Display details of 3 manager employees
 #include<iostream>
 using namespace std;
-class array
+
+class employee
 {
 public:
-	void sorting(int a[],int s)
-	{
-		for (int i = 0; i < s; i++)
-		 {
-       		 for (int j = 0; j < s - i - 1; j++)
-       		  {
-           		 if (a[j] > a[j + 1]) 
-           		 	{
-              
-               			 int temp = a[j];
-             		  	 a[j] = a[j + 1];
-              		 	 a[j + 1] = temp;
-              		}
-            }
-        }
+	string name;
+	int salary,age;
+		void get_data()
+		{
+			cout << "Enter employee name : ";
+			cin >> name;
+			cout << "Enter employee salary : ";
+			cin >> salary;
+			cout << "Enter employee age : ";
+			cin >> age;
 
-        cout << "SORTED ARRAY IN ASCENDING ORDER :  ";
-        for (int i = 0; i < s; i++) 
-        {
-        	cout << " " << a[i];
-        }
-	}
+		}
+		void show()
+		{
+			cout << "name : " << name << endl;
+			cout << "salary : " << salary << endl;
+			cout << "age : "<< age <<endl;
+
+		}
+
 };
 int main()
 {
-	array arr;
-	int a[30],s;
-
-	cout << "Enter size : ";
-	cin >> s;
-
-	cout << "Enter elements : ";
-	for (int i = 0; i < s; i++)
-	{
-		cin >> a[i];
-	}
-
-arr.sorting(a,s);
-return 0;
+	employee e1,e2,e3;
+	e1.get_data();
+	e2.get_data();
+	e3.get_data();
+	e1.show();
+	e2.show();
+	e3.show();
+	return 0;
 }
